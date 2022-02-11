@@ -3,14 +3,14 @@ import { createSlice } from '@reduxjs/toolkit'
 export const companiesSlice = createSlice({
   name: 'companies',
   initialState: {
-    companies: ['google', 'facebook']
+    list: ['google', 'facebook']
   },
   reducers: {
     load: (state, action) => {
-      state.companies = action.payload
+      state.list = action.payload
     },
     add: (state, action) => {
-      state.companies.push(action.payload)
+      state.list.push(action.payload)
     },
     remove: state => {
       // write delete logic here
@@ -18,6 +18,19 @@ export const companiesSlice = createSlice({
     }
   }
 });
+
+// thunks
+export const fetchCompaniesList = () => {
+  return async (dispatch, getState) => {
+    try {
+      const companiesList = await // fetch call
+      dispatch(load(companiesList))
+    } catch (err) {
+      console.log('sorry, an error occured: ', err)
+    }
+  }
+}
+
 
 export const { load, add, remove } = companiesSlice.actions
 

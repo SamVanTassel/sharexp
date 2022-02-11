@@ -38,6 +38,12 @@ const config = {
           },
         },
       },
+      { // required to get react toolkit to load as esm module
+        test: /\.m?js/,
+        resolve: {
+            fullySpecified: false
+        }
+      },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
         use: ["file-loader"],

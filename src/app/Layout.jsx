@@ -3,8 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const NavBar = () => {
- //  const headline = useSelector((st) => st.users.developer);
- const headline = 'ok'
+ const headline = useSelector((state) => state.users.username);
   return (
     <div id="page">
       <div id="navbar">

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Companies = () => {
-  const companies = useSelector(state => state.companies.companies)
+  const companies = useSelector(state => state.companies.list)
   const dispatch = useDispatch();
 
   // useEffect(() => {
