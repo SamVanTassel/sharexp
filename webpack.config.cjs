@@ -8,15 +8,16 @@ const config = {
   mode: process.env.NODE_ENV || 'production',
   devServer: {
     compress: true,
+    historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'client/static/'),
+      directory: path.join(__dirname, 'src/'),
       publicPath: '/',
     },
     host: 'localhost',
     port: 3000,
     proxy: { "/api": "http://localhost:8080" },
   },
-  entry: path.resolve(__dirname, "./client/index.js"),
+  entry: path.resolve(__dirname, "./src/index.js"),
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "bundle.js",

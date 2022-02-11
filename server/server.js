@@ -28,6 +28,11 @@ app.use('/api/', globalRouter);
 app.use('/api/companies', companiesRouter);
 app.use('/api/users', usersRouter);
 
+// route gets for other pages to index, to load JS and allow react-router to take over
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../index.html'));
+// });
+
 // route all other calls to 404 error handler
 app.use((req, res) => res.status(404).json('Endpoint could not be found'));
 

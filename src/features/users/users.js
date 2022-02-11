@@ -3,7 +3,8 @@ import types from '../constants/actionTypes.js';
 const initialState = {
   username: '',
   password: '',
-  userLoggedIn: false
+  userLoggedIn: false,
+  developer: "Sam"
 };
 
 
