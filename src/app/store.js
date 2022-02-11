@@ -12,7 +12,9 @@ const store = configureStore({
     users: usersReducer,
     posts: postsReducer,
     [api.reducerPath]: api.reducer
-  }
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(api.middleware)
 });
 
 export default store;

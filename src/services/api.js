@@ -6,8 +6,18 @@ export const api = createApi({
   endpoints: builder => ({
     getCompanies: builder.query({
       query: () => 'companies',
+    }),
+    getSelectedCompany: builder.query({
+      query: (id) => `companies/${id}`
+    }),
+    postCompany: builder.mutation({
+      query: ({ companyName }) => ({
+        url: 'companies/',
+        mehtod: 'POST',
+        body: companyName
+      })
     })
   })
 })
 
-export const { getCompaniesQuery } = api;
+export const { useGetCompaniesQuery, useGetSelectedCompanyQuery, usePostCompanyMutation } = api;
