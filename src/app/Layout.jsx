@@ -9,14 +9,14 @@ const NavBar = () => {
       <div id="navbar">
         <div id="links">
         <Link to="/">Home</Link>
-        <Link to="companies">Companies</Link>
+        <Link to="companies/all">Companies</Link>
         </div>
         <div id="user">
           <Link to="login">Login</Link>
           {headline}
         <img
           alt="Peter"
-          src="https://avatars.dicebear.com/api/big-smile/Peter.svg"
+          src={`https://avatars.dicebear.com/api/big-smile/${headline}.svg`}
           width="50px"
           height="50px"
         />

@@ -19,19 +19,6 @@ export const companiesSlice = createSlice({
   }
 });
 
-// thunks
-export const fetchCompaniesList = () => {
-  return async (dispatch, getState) => {
-    try {
-      const companiesList = await // fetch call
-      dispatch(load(companiesList))
-    } catch (err) {
-      console.log('sorry, an error occured: ', err)
-    }
-  }
-}
-
-
 export const { load, add, remove } = companiesSlice.actions
 
 export default companiesSlice.reducer;
