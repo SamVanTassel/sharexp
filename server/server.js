@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 8080;
-app.use(express.static(path.resolve(__dirname, '../client/static/')))
+app.use(express.static(path.resolve(__dirname, '../src/')))
 
 // middleware to show us request bodies
 app.use(express.json());
