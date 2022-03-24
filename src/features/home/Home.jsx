@@ -15,6 +15,7 @@ const Home = () => {
         <input type='text'></input>
         <label>Location</label>
         <input type='text'></input>
+        <submit>Submit</submit>
       </form>
     </div>
   )
